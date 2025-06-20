@@ -1,0 +1,25 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.0.0/schema.json",
+  "linter": {
+    "rules": {
+      "correctness": {
+        "useHookAtTopLevel": "error"
+      },
+      "style": {
+        "useFragmentSyntax": "error"
+      },
+      "nursery": {
+        "useConsistentCurlyBraces": "error",
+        "useSortedClasses": {
+          "fix": "safe",
+          "level": "warn",
+          "options": {
+            "attributes": ["classList"],
+            "functions": ["clsx", "cva", "tw", "tw.*", "cn"]
+          }
+        },
+        "useValidAutocomplete": "error"
+      }
+    }
+  }
+}

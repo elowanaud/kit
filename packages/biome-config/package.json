@@ -1,0 +1,14 @@
+{
+  "name": "@kit/biome-config",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./base": "./src/base.json",
+    "./react": "./src/react.json",
+    "./nextjs": "./src/nextjs.json",
+    "./adonisjs": "./src/adonisjs.json"
+  },
+  "peerDependencies": {
+    "@biomejs/biome": "2.0.0"
+  }
+}
