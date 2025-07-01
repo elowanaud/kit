@@ -8,6 +8,7 @@
 		"lint:fix": "biome lint --fix",
 		"format": "biome format",
 		"format:fix": "biome format --fix",
+		"test": "turbo run test",
 		"tsc": "turbo run tsc"
 	},
 	"devDependencies": {
