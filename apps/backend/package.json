@@ -5,6 +5,7 @@
 	"scripts": {
 		"build": "node ace build",
 		"dev": "node ace serve --hmr",
+		"docker-compose": "docker compose up",
 		"test": "node ace test",
 		"tsc": "tsc --noEmit"
 	},
