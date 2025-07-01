@@ -1,12 +1,12 @@
 {
-  "name": "@kit/tailwind-theme",
-  "private": true,
-  "type": "module",
-  "exports": {
-    "./base": "./src/base.css",
-    "./drakkar": "./src/drakkar.css"
-  },
-  "peerDependencies": {
-    "tailwindcss": "^4.1.10"
-  }
+	"name": "@kit/tailwind-theme",
+	"private": true,
+	"type": "module",
+	"exports": {
+		"./base.css": "./src/base.css",
+		"./drakkar.css": "./src/drakkar.css"
+	},
+	"peerDependencies": {
+		"tailwindcss": "^4.1.10"
+	}
 }

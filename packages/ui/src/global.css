@@ -1,0 +1,4 @@
+@import "tailwindcss";
+
+@import "@kit/tailwind-theme/base.css";
+@import "@kit/tailwind-theme/drakkar.css";

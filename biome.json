@@ -1,0 +1,83 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.0.6/schema.json",
+	"formatter": {
+		"enabled": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"complexity": {
+				"noExcessiveCognitiveComplexity": "error",
+				"noUselessStringConcat": "error",
+				"noUselessUndefinedInitialization": "error",
+				"noVoid": "error",
+				"useDateNow": "error",
+				"useSimplifiedLogicExpression": "error",
+				"noUselessStringRaw": "warn",
+				"noUselessEscapeInRegex": "warn"
+			},
+			"a11y": {
+				"noLabelWithoutControl": "off",
+				"useAriaPropsSupportedByRole": "error"
+			},
+			"correctness": {
+				"noUndeclaredVariables": "error",
+				"noUnusedFunctionParameters": "warn",
+				"noUnusedImports": "warn",
+				"noUnusedPrivateClassMembers": "error",
+				"noUnusedVariables": "warn",
+				"useImportExtensions": "error"
+			},
+			"performance": {
+				"noReExportAll": "error",
+				"useTopLevelRegex": "warn"
+			},
+			"style": {
+				"noNamespace": "error",
+				"noNegationElse": "warn",
+				"noRestrictedGlobals": "error",
+				"noShoutyConstants": "error",
+				"noNestedTernary": "error",
+				"noYodaExpression": "warn",
+				"noEnum": "error",
+				"useBlockStatements": "error",
+				"useCollapsedElseIf": "error",
+				"noCommonJs": "error",
+				"noNonNullAssertion": "off",
+				"useAtIndex": "warn",
+				"useCollapsedIf": "error",
+				"noSubstr": "error",
+				"useConsistentArrayType": {
+					"level": "error",
+					"options": {
+						"syntax": "shorthand"
+					}
+				},
+				"useConsistentBuiltinInstantiation": "error",
+				"useDefaultSwitchClause": "error",
+				"useExplicitLengthCheck": "error",
+				"useForOf": "warn",
+				"useShorthandAssign": "warn",
+				"useThrowNewError": "error",
+				"useThrowOnlyError": "error"
+			},
+			"suspicious": {
+				"noConsole": "warn",
+				"noEmptyBlockStatements": "warn",
+				"noEvolvingTypes": "error",
+				"useErrorMessage": "error",
+				"useNumberToFixedDigitsArgument": "warn",
+				"noTemplateCurlyInString": "error"
+			}
+		}
+	},
+	"assist": {
+		"enabled": true,
+		"actions": {
+			"source": {
+				"organizeImports": "on"
+			}
+		}
+	}
+}
