@@ -2,13 +2,7 @@ import { Button } from "@kit/ui/components/button";
 import { BoxIcon } from "@kit/ui/icons";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-const variants = [
-	"primary",
-	"outline",
-	"ghost",
-	"destructive",
-	"link",
-] as const;
+const variants = ["primary", "outline", "ghost", "destructive", "link"] as const;
 const sizes = ["sm", "md", "lg", "icon-sm", "icon-md", "icon-lg"] as const;
 const states = ["default", "loading", "disabled"] as const;
 
@@ -61,8 +55,7 @@ const meta = {
 		},
 		render: {
 			name: "Render",
-			description:
-				"The render function of the button if you want to use a custom component",
+			description: "The render function of the button if you want to use a custom component",
 			// @ts-expect-error - Storybook doesn't support ReactNode type
 			type: "ReactNode",
 			control: {
@@ -89,9 +82,7 @@ export const Preview: Story = {
 			<main className="grid gap-16">
 				{variants.map((variant) => (
 					<section key={variant} className="grid gap-4">
-						<h1 className="font-bold text-2xl">
-							{variant.charAt(0).toUpperCase() + variant.slice(1)}
-						</h1>
+						<h1 className="font-bold text-2xl">{variant.charAt(0).toUpperCase() + variant.slice(1)}</h1>
 						{sizes.map((size) => (
 							<article key={`${variant}_${size}`} className="flex gap-2">
 								{states.map((state) => (
@@ -106,8 +97,7 @@ export const Preview: Story = {
 											<BoxIcon />
 										) : (
 											<>
-												<BoxIcon />{" "}
-												{variant.charAt(0).toUpperCase() + variant.slice(1)}
+												<BoxIcon /> {variant.charAt(0).toUpperCase() + variant.slice(1)}
 											</>
 										)}
 									</Button>

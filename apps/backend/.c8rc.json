@@ -1,10 +1,5 @@
 {
-	"include": [
-		"database/migrations/**",
-		"src/controllers/**",
-		"src/models/**",
-		"src/services/**"
-	],
+	"include": ["database/migrations/**", "src/controllers/**", "src/models/**", "src/services/**"],
 	"check-coverage": true,
 	"per-file": true
 }

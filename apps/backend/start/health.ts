@@ -1,8 +1,4 @@
-import {
-	DiskSpaceCheck,
-	HealthChecks,
-	MemoryHeapCheck,
-} from "@adonisjs/core/health";
+import { DiskSpaceCheck, HealthChecks, MemoryHeapCheck } from "@adonisjs/core/health";
 import { DbCheck } from "@adonisjs/lucid/database";
 import db from "@adonisjs/lucid/services/db";
 
