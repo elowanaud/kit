@@ -1,0 +1,35 @@
+type: http_request
+model: http_request
+id: rq_cCz6P3bxhg
+createdAt: 2025-07-05T10:49:27.202951
+updatedAt: 2025-07-05T11:10:18.248271
+workspaceId: wk_onW5dToXJ6
+folderId: fl_4EUMi2Vauv
+authentication: {}
+authenticationType: null
+body:
+  form:
+  - enabled: true
+    id: aKtsPwFFBJ
+    name: email
+    value: ${[ EMAIL_CREDENTIAL ]}
+  - enabled: true
+    id: WvFXtA3K9W
+    name: password
+    value: ${[ PASSWORD_CREDENTIAL ]}
+  - enabled: true
+    id: jbGDnpfdWD
+    name: ''
+    value: ''
+bodyType: multipart/form-data
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: multipart/form-data
+  id: C6ugmHgtkU
+method: POST
+name: Login
+sortPriority: -1751712567200.0
+url: ${[ BASE_URL ]}/auth/login
+urlParameters: []

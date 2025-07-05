@@ -1,5 +1,7 @@
+import { authApiClient } from "@adonisjs/auth/plugins/api_client";
 import app from "@adonisjs/core/services/app";
 import testUtils from "@adonisjs/core/services/test_utils";
+import { sessionApiClient } from "@adonisjs/session/plugins/api_client";
 import { apiClient } from "@japa/api-client";
 import { assert } from "@japa/assert";
 import { pluginAdonisJS } from "@japa/plugin-adonisjs";
@@ -16,10 +18,12 @@ import env from "#start/env";
  */
 export const plugins: Config["plugins"] = [
 	assert(),
+	pluginAdonisJS(app),
+	authApiClient(app),
+	sessionApiClient(app),
 	apiClient({
 		baseURL: `http://${env.get("HOST")}:${env.get("PORT")}`,
 	}),
-	pluginAdonisJS(app),
 ];
 
 /**

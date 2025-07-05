@@ -1,0 +1,19 @@
+type: http_request
+model: http_request
+id: rq_CxLdbamrDz
+createdAt: 2025-07-05T11:08:31.666426
+updatedAt: 2025-07-05T11:08:49.180809
+workspaceId: wk_onW5dToXJ6
+folderId: fl_4EUMi2Vauv
+authentication: {}
+authenticationType: null
+body:
+  form: []
+bodyType: null
+description: ''
+headers: []
+method: DELETE
+name: Logout
+sortPriority: -1751712567199.999
+url: ${[ BASE_URL ]}/auth/logout
+urlParameters: []

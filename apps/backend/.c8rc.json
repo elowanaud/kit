@@ -1,5 +1,5 @@
 {
 	"all": true,
-	"include": ["src/controllers/**", "src/models/**", "src/services/**", "src/jobs/**"],
+	"include": ["src/controllers/**", "src/models/**", "src/services/**", "src/jobs/**", "src/presenters/**"],
 	"check-coverage": true
 }

@@ -1,0 +1,14 @@
+type: workspace
+model: workspace
+id: wk_onW5dToXJ6
+createdAt: 2025-07-05T10:49:17.191440
+updatedAt: 2025-07-05T10:49:18.406811
+authentication: {}
+authenticationType: null
+description: ''
+headers: []
+name: Kit
+encryptionKeyChallenge: eUE0azNuQwGgA2SSvOHrLUBtIwFwimXGuTyBao4ZYjzMsA1MQQgOluzEzhmkvF8ad3Fq41gL4g3uyeoG+BDGcYCM2ZB+tSOYXPYa+Dan2oXkQihRrYzD0hd2crib5rvimmI=
+settingValidateCertificates: true
+settingFollowRedirects: true
+settingRequestTimeout: 0

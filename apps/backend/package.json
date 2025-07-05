@@ -16,6 +16,7 @@
 		"#exceptions/*": "./src/exceptions/*.js",
 		"#models/*": "./src/models/*.js",
 		"#jobs/*": "./src/jobs/*.js",
+		"#presenters/*": "./src/presenters/*.js",
 		"#mails/*": "./src/mails/*.js",
 		"#services/*": "./src/services/*.js",
 		"#listeners/*": "./src/listeners/*.js",
