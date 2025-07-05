@@ -53,6 +53,7 @@ export default defineConfig({
 		() => import("@adonisjs/session/session_provider"),
 		() => import("@adonisjs/auth/auth_provider"),
 		() => import("@rlanz/bull-queue/queue_provider"),
+		() => import("@rlanz/sentry/provider"),
 	],
 
 	/*

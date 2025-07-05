@@ -1,5 +1,7 @@
 import { ExceptionHandler, type HttpContext } from "@adonisjs/core/http";
 import app from "@adonisjs/core/services/app";
+import type { HttpError } from "@adonisjs/core/types/http";
+import { Sentry } from "@rlanz/sentry";
 
 export default class HttpExceptionHandler extends ExceptionHandler {
 	/**
@@ -23,6 +25,10 @@ export default class HttpExceptionHandler extends ExceptionHandler {
 	 * @note You should not attempt to send a response from this method.
 	 */
 	async report(error: unknown, ctx: HttpContext) {
+		if (this.shouldReport(error as HttpError)) {
+			Sentry.captureException(error);
+		}
+
 		return super.report(error, ctx);
 	}
 }
