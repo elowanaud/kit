@@ -6,6 +6,7 @@
 		"build": "node ace build",
 		"dev": "node ace serve --hmr",
 		"docker-compose": "docker compose up",
+		"worker": "node ace queue:listen",
 		"test": "c8 node ace test",
 		"test:watch": "node ace test --watch",
 		"tsc": "tsc --noEmit"
@@ -14,6 +15,7 @@
 		"#controllers/*": "./src/controllers/*.js",
 		"#exceptions/*": "./src/exceptions/*.js",
 		"#models/*": "./src/models/*.js",
+		"#jobs/*": "./src/jobs/*.js",
 		"#mails/*": "./src/mails/*.js",
 		"#services/*": "./src/services/*.js",
 		"#listeners/*": "./src/listeners/*.js",
@@ -27,6 +29,18 @@
 		"#start/*": "./start/*.js",
 		"#tests/*": "./tests/*.js",
 		"#config/*": "./config/*.js"
+	},
+	"dependencies": {
+		"@adonisjs/auth": "^9.4.0",
+		"@adonisjs/core": "^6.18.0",
+		"@adonisjs/cors": "^2.2.1",
+		"@adonisjs/lucid": "^21.6.1",
+		"@adonisjs/session": "^7.5.1",
+		"@rlanz/bull-queue": "^3.1.0",
+		"@vinejs/vine": "^3.0.1",
+		"luxon": "^3.6.1",
+		"pg": "^8.16.3",
+		"reflect-metadata": "^0.2.2"
 	},
 	"devDependencies": {
 		"@adonisjs/assembler": "^7.8.2",
@@ -43,17 +57,6 @@
 		"pino-pretty": "^13.0.0",
 		"ts-node-maintained": "^10.9.5",
 		"typescript": "~5.8"
-	},
-	"dependencies": {
-		"@adonisjs/auth": "^9.4.0",
-		"@adonisjs/core": "^6.18.0",
-		"@adonisjs/cors": "^2.2.1",
-		"@adonisjs/lucid": "^21.6.1",
-		"@adonisjs/session": "^7.5.1",
-		"@vinejs/vine": "^3.0.1",
-		"luxon": "^3.6.1",
-		"pg": "^8.16.3",
-		"reflect-metadata": "^0.2.2"
 	},
 	"hotHook": {
 		"boundaries": [
