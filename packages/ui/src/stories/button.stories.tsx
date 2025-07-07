@@ -2,9 +2,9 @@ import { Button } from "@kit/ui/components/button";
 import { BoxIcon } from "@kit/ui/icons";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-const variants = ["primary", "outline", "ghost", "destructive", "link"] as const;
-const sizes = ["sm", "md", "lg", "icon-sm", "icon-md", "icon-lg"] as const;
-const states = ["default", "loading", "disabled"] as const;
+const VARIANTS = ["primary", "outline", "ghost", "destructive", "link"] as const;
+const SIZES = ["sm", "md", "lg", "icon-sm", "icon-md", "icon-lg"] as const;
+const STATES = ["default", "loading", "disabled"] as const;
 
 const meta = {
 	title: "General/Button",
@@ -26,7 +26,7 @@ const meta = {
 			control: {
 				type: "radio",
 			},
-			options: variants,
+			options: VARIANTS,
 		},
 		size: {
 			name: "Size",
@@ -35,7 +35,7 @@ const meta = {
 			control: {
 				type: "radio",
 			},
-			options: sizes,
+			options: SIZES,
 		},
 		disabled: {
 			name: "Disabled",
@@ -80,12 +80,12 @@ export const Preview: Story = {
 	render: () => {
 		return (
 			<main className="grid gap-16">
-				{variants.map((variant) => (
+				{VARIANTS.map((variant) => (
 					<section key={variant} className="grid gap-4">
 						<h1 className="font-bold text-2xl">{variant.charAt(0).toUpperCase() + variant.slice(1)}</h1>
-						{sizes.map((size) => (
+						{SIZES.map((size) => (
 							<article key={`${variant}_${size}`} className="flex gap-2">
-								{states.map((state) => (
+								{STATES.map((state) => (
 									<Button
 										key={`${variant}_${size}_{${state}}`}
 										variant={variant}

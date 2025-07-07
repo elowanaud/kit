@@ -11,7 +11,7 @@ const buttonVariants = cva(
 		variants: {
 			variant: {
 				primary:
-					"bg-primary-9 text-white hover:not-disabled:bg-primary-10 focus-visible:ring-2 focus-visible:ring-primary-7 focus-visible:ring-offset-1",
+					"bg-primary-9 text-primary-contrast hover:not-disabled:bg-primary-10 focus-visible:ring-2 focus-visible:ring-primary-7 focus-visible:ring-offset-1",
 				outline:
 					"border border-neutral-7 bg-white text-black hover:not-disabled:border-neutral-8 hover:not-disabled:bg-neutral-2 focus-visible:ring-2 focus-visible:ring-neutral-7 focus-visible:ring-offset-1",
 				ghost: "bg-transparent text-black hover:not-disabled:bg-neutral-3 focus-visible:bg-neutral-3",

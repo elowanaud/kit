@@ -1,5 +1,8 @@
 {
 	"all": true,
 	"include": ["src/controllers/**", "src/models/**", "src/services/**", "src/jobs/**", "src/presenters/**"],
-	"check-coverage": true
+	"check-coverage": true,
+	"skip-full": true,
+	"per-file": true,
+	"clean": true
 }
