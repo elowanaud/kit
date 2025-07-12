@@ -3,7 +3,7 @@ import { BoxIcon } from "@kit/ui/icons";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 const VARIANTS = ["primary", "outline", "ghost", "destructive", "link"] as const;
-const SIZES = ["sm", "md", "icon-sm", "icon-md"] as const;
+const SIZES = ["md", "icon-sm", "icon-md"] as const;
 const STATES = ["default", "loading", "disabled"] as const;
 
 const meta = {
