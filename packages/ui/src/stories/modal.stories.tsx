@@ -15,7 +15,7 @@ export const Playground: Story = {
 		return (
 			<Modal>
 				<Modal.Trigger render={<Button />}>Open Modal</Modal.Trigger>
-				<Modal.Content className="grid gap-6">
+				<Modal.Content className="grid gap-9">
 					<div className="grid gap-2">
 						<Modal.Title className="text-2xl font-bold">Lorem ipsum dolor sit amet.</Modal.Title>
 						<Modal.Description className="text-sm text-neutral-10">
