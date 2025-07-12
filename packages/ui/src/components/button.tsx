@@ -22,10 +22,8 @@ const buttonVariants = cva(
 			size: {
 				sm: "h-6 rounded-sm px-2 text-xs [&_svg]:size-3",
 				md: "h-8 rounded-md px-3 text-sm [&_svg]:size-4",
-				lg: "h-10 rounded-lg px-4 text-base [&_svg]:size-5",
 				"icon-sm": "size-6 rounded-sm text-xs [&_svg]:size-3",
 				"icon-md": "size-8 rounded-md text-sm [&_svg]:size-4",
-				"icon-lg": "size-10 rounded-lg text-base [&_svg]:size-5",
 			},
 			loading: {
 				true: "disabled:cursor-progress disabled:opacity-100",

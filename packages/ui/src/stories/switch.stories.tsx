@@ -1,15 +1,15 @@
-import { Checkbox } from "@kit/ui/components/checkbox";
+import { Switch } from "@kit/ui/components/switch";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 const STATES = ["default", "checked", "disabled", "checked-disabled"] as const;
 
 const meta = {
-	title: "Data Entry / Checkbox",
-	component: Checkbox,
+	title: "Data Entry / Switch",
+	component: Switch,
 	argTypes: {
 		checked: {
 			name: "Checked",
-			description: "Whether the checkbox is checked",
+			description: "Whether the switch is checked",
 			type: "boolean",
 			control: {
 				type: "boolean",
@@ -17,14 +17,14 @@ const meta = {
 		},
 		disabled: {
 			name: "Disabled",
-			description: "Whether the checkbox is disabled",
+			description: "Whether the switch is disabled",
 			type: "boolean",
 			control: {
 				type: "boolean",
 			},
 		},
 	},
-} satisfies Meta<typeof Checkbox>;
+} satisfies Meta<typeof Switch>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -36,7 +36,7 @@ export const Preview: Story = {
 		return (
 			<section className="flex gap-4">
 				{STATES.map((state) => (
-					<Checkbox key={state} checked={state.includes("checked")} disabled={state.includes("disabled")} />
+					<Switch key={state} checked={state.includes("checked")} disabled={state.includes("disabled")} />
 				))}
 			</section>
 		);
