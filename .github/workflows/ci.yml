@@ -8,7 +8,7 @@ env:
 jobs:
   lint:
     name: "💅 Lint"
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-2vcpu-ubuntu-2404
     steps:
       - uses: actions/checkout@v4
 
@@ -31,7 +31,7 @@ jobs:
 
   format:
     name: "💅 Format"
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-2vcpu-ubuntu-2404
     steps:
       - uses: actions/checkout@v4
 
@@ -54,7 +54,7 @@ jobs:
 
   type-check:
     name: "🔎 Type Check"
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-2vcpu-ubuntu-2404
     steps:
       - uses: actions/checkout@v4
 
@@ -77,7 +77,7 @@ jobs:
 
   build-backend:
     name: "📦 Build Backend"
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-2vcpu-ubuntu-2404
     needs: [lint, format, type-check]
     steps:
       - uses: actions/checkout@v4
@@ -89,7 +89,7 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Build
-        uses: docker/build-push-action@v6
+        uses: useblacksmith/build-push-action@v1
         with:
           file: ./apps/backend/Dockerfile
           context: .
