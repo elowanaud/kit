@@ -1,6 +1,6 @@
 "use client";
 
-import { Dialog } from "@base-ui-components/react";
+import { AlertDialog } from "@base-ui-components/react";
 import { useMediaQuery } from "@base-ui-components/react/unstable-use-media-query";
 import { Button } from "@kit/ui/components/button";
 import cn from "@kit/ui/utils/cn";
@@ -9,40 +9,41 @@ import { AnimatePresence, domAnimation, LazyMotion } from "motion/react";
 import * as m from "motion/react-m";
 import { createContext, useContext, useState } from "react";
 
-type ModalContextType = {
+type AlertModalContextType = {
 	isOpen: boolean;
 };
-const ModalContext = createContext<ModalContextType>({
+
+const AlertModalContext = createContext<AlertModalContextType>({
 	isOpen: false,
 });
 
-export function Modal(props: Dialog.Root.Props) {
+export function AlertModal(props: AlertDialog.Root.Props) {
 	const { onOpenChange, ...otherProps } = props;
 	const [isOpen, setIsOpen] = useState(props.defaultOpen ?? props.open ?? false);
 
-	const handleOpenChange = (open: boolean, event?: Event, reason?: Dialog.Root.OpenChangeReason) => {
+	const handleOpenChange = (open: boolean, event?: Event, reason?: AlertDialog.Root.OpenChangeReason) => {
 		setIsOpen(open);
 		onOpenChange?.(open, event, reason);
 	};
 
 	return (
-		<ModalContext value={{ isOpen }}>
-			<Dialog.Root onOpenChange={handleOpenChange} {...otherProps} />
-		</ModalContext>
+		<AlertModalContext value={{ isOpen }}>
+			<AlertDialog.Root onOpenChange={handleOpenChange} {...otherProps} />
+		</AlertModalContext>
 	);
 }
 
-function ModalContent(props: Omit<Dialog.Popup.Props, "render">) {
+function AlertModalContent(props: Omit<AlertDialog.Popup.Props, "render">) {
 	const { children, className, ...otherProps } = props;
-	const { isOpen } = useContext(ModalContext);
+	const { isOpen } = useContext(AlertModalContext);
 	const isMobile = useMediaQuery("(max-width: 640px)", {});
 
 	return (
 		<LazyMotion features={domAnimation}>
 			<AnimatePresence>
 				{isOpen && (
-					<Dialog.Portal keepMounted>
-						<Dialog.Backdrop
+					<AlertDialog.Portal keepMounted>
+						<AlertDialog.Backdrop
 							className="fixed inset-0 bg-black/50"
 							render={
 								<m.div
@@ -53,7 +54,7 @@ function ModalContent(props: Omit<Dialog.Popup.Props, "render">) {
 								/>
 							}
 						/>
-						<Dialog.Popup
+						<AlertDialog.Popup
 							className={cn(
 								"fixed inset-0 sm:m-auto mt-auto max-w-2xl h-fit w-full sm:w-[calc(100%-2rem)] bg-neutral-1 rounded-t-lg sm:rounded-lg p-4 border border-neutral-7",
 								className,
@@ -84,38 +85,38 @@ function ModalContent(props: Omit<Dialog.Popup.Props, "render">) {
 							}
 							{...otherProps}
 						>
-							<Dialog.Close
+							<AlertDialog.Close
 								className="absolute top-2 right-2"
 								render={<Button size={isMobile ? "icon-sm" : "icon-md"} variant="ghost" />}
 							>
 								<XIcon strokeWidth={3} />
-							</Dialog.Close>
+							</AlertDialog.Close>
 							{children}
-						</Dialog.Popup>
-					</Dialog.Portal>
+						</AlertDialog.Popup>
+					</AlertDialog.Portal>
 				)}
 			</AnimatePresence>
 		</LazyMotion>
 	);
 }
-Modal.Content = ModalContent;
+AlertModal.Content = AlertModalContent;
 
-function ModalTrigger(props: Dialog.Trigger.Props) {
-	return <Dialog.Trigger {...props} />;
+function AlertModalTrigger(props: AlertDialog.Trigger.Props) {
+	return <AlertDialog.Trigger {...props} />;
 }
-Modal.Trigger = ModalTrigger;
+AlertModal.Trigger = AlertModalTrigger;
 
-function ModalTitle(props: Dialog.Title.Props) {
-	return <Dialog.Title {...props} />;
+function AlertModalTitle(props: AlertDialog.Title.Props) {
+	return <AlertDialog.Title {...props} />;
 }
-Modal.Title = ModalTitle;
+AlertModal.Title = AlertModalTitle;
 
-function ModalDescription(props: Dialog.Description.Props) {
-	return <Dialog.Description {...props} />;
+function AlertModalDescription(props: AlertDialog.Description.Props) {
+	return <AlertDialog.Description {...props} />;
 }
-Modal.Description = ModalDescription;
+AlertModal.Description = AlertModalDescription;
 
-function ModalClose(props: Dialog.Close.Props) {
-	return <Dialog.Close {...props} />;
+function AlertModalClose(props: AlertDialog.Close.Props) {
+	return <AlertDialog.Close {...props} />;
 }
-Modal.Close = ModalClose;
+AlertModal.Close = AlertModalClose;

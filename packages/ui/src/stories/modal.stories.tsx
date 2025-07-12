@@ -1,6 +1,6 @@
+import { Button } from "@kit/ui/components/button";
 import { Modal } from "@kit/ui/components/modal";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Button } from "../components/button";
 
 const meta = {
 	title: "Modal",
@@ -25,7 +25,7 @@ export const Playground: Story = {
 						</Modal.Description>
 					</div>
 
-					<Button className="w-full sm:w-fit">Submit</Button>
+					<Modal.Close render={<Button />}>Submit</Modal.Close>
 				</Modal.Content>
 			</Modal>
 		);
