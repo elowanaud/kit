@@ -2,8 +2,8 @@
 
 import { Button } from "@kit/ui/components/button";
 import { Input, type InputProps } from "@kit/ui/components/input";
+import { EyeIcon, EyeOffIcon } from "@kit/ui/icons";
 import { useState } from "react";
-import { EyeIcon, EyeOffIcon } from "../icons";
 
 export type PasswordInputProps = Omit<InputProps, "type" | "rightIcon">;
 

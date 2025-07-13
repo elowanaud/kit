@@ -15,7 +15,14 @@
 				"noUnusedVariables": {
 					"level": "warn",
 					"fix": "none"
+				},
+				"noUnusedFunctionParameters": {
+					"level": "warn",
+					"fix": "none"
 				}
+			},
+			"a11y": {
+				"noLabelWithoutControl": "off"
 			}
 		}
 	},

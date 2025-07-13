@@ -3,8 +3,8 @@
 import { Dialog } from "@base-ui-components/react";
 import { useMediaQuery } from "@base-ui-components/react/unstable-use-media-query";
 import { Button } from "@kit/ui/components/button";
+import { XIcon } from "@kit/ui/icons";
 import cn from "@kit/ui/utils/cn";
-import { XIcon } from "lucide-react";
 import { AnimatePresence, domAnimation, LazyMotion } from "motion/react";
 import * as m from "motion/react-m";
 import { createContext, useContext, useState } from "react";
