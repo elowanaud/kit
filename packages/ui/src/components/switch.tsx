@@ -14,7 +14,7 @@ export function Switch(props: SwitchProps) {
 			)}
 			{...otherProps}
 		>
-			<BaseUiSwitch.Thumb className="aspect-square h-full transition-all rounded-full bg-white ring ring-neutral-6 group-aria-checked/switch:ring-primary-11 group-aria-checked/switch:right-0 group-aria-checked/switch:translate-x-4" />
+			<BaseUiSwitch.Thumb className="aspect-square h-full transition-all rounded-full bg-neutral-1 ring ring-neutral-6 group-aria-checked/switch:ring-primary-11 group-aria-checked/switch:right-0 group-aria-checked/switch:translate-x-4" />
 		</BaseUiSwitch.Root>
 	);
 }
