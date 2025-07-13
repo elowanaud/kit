@@ -3,7 +3,7 @@ import { Modal } from "@kit/ui/components/modal";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 const meta = {
-	title: "Modal",
+	title: "Feedback/Modal",
 	component: Modal,
 } satisfies Meta<typeof Modal>;
 

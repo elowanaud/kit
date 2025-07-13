@@ -3,7 +3,7 @@ import { Button } from "@kit/ui/components/button";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 const meta = {
-	title: "Alert Modal",
+	title: "Feedback/Alert Modal",
 	component: AlertModal,
 } satisfies Meta<typeof AlertModal>;
 
