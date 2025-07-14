@@ -158,8 +158,8 @@ importers:
         specifier: ^16.2.0
         version: 16.2.0
       lucide-react:
-        specifier: ^0.518.0
-        version: 0.518.0(react@19.1.0)
+        specifier: ^0.525.0
+        version: 0.525.0(react@19.1.0)
       storybook:
         specifier: ^9.0.15
         version: 9.0.15(@testing-library/dom@10.4.0)(prettier@3.6.2)
@@ -2712,8 +2712,8 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
-  lucide-react@0.518.0:
-    resolution: {integrity: sha512-kFg34uQqnVl/7HwAiigxPSpj//43VIVHQbMygQPtS1yT4btMXHCWUipHcgcXHD2pm1Z2nUBA/M+Vnh/YmWXQUw==}
+  lucide-react@0.525.0:
+    resolution: {integrity: sha512-Tm1txJ2OkymCGkvwoHt33Y2JpN5xucVq1slHcgE6Lk0WjDfjgKWor5CdVER8U6DvcfMwh4M8XxmpTiyzfmfDYQ==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
@@ -3425,6 +3425,7 @@ packages:
   superagent@10.2.1:
     resolution: {integrity: sha512-O+PCv11lgTNJUzy49teNAWLjBZfc+A1enOwTpLlH6/rsvKcTwcdTT8m9azGkVqM7HBl5jpyZ7KTPhHweokBcdg==}
     engines: {node: '>=14.18.0'}
+    deprecated: Please upgrade to superagent v10.2.2+, see release notes at https://github.com/forwardemail/superagent/releases/tag/v10.2.2 - maintenance is supported by Forward Email @ https://forwardemail.net
 
   supports-color@10.0.0:
     resolution: {integrity: sha512-HRVVSbCCMbj7/kdWF9Q+bbckjBHLtHMEoJWlkmYzzdwhYMkjkOwubLM6t7NbWKjgKamGDrWL1++KrjUO1t9oAQ==}
@@ -6292,7 +6293,7 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
-  lucide-react@0.518.0(react@19.1.0):
+  lucide-react@0.525.0(react@19.1.0):
     dependencies:
       react: 19.1.0
 
