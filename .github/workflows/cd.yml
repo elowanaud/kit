@@ -25,14 +25,6 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const lastRelease = await github.rest.repos.getLatestRelease({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-            })
-            console.log(lastRelease)
-
-            return
-            
             await github.rest.repos.createRelease({
               owner: context.repo.owner,
               repo: context.repo.repo,
