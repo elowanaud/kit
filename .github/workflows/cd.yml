@@ -21,12 +21,15 @@ jobs:
         id: time
         run: echo "time=$(date +%H:%M:%S)" >> $GITHUB_OUTPUT
 
-      - name: Create Release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create release notes
+        id: release-please
+        uses: googleapis/release-please-action@v4
         with:
-          tag_name: "V${{ steps.date.outputs.date }}-${{ steps.time.outputs.time }}"
-          release_name: "V${{ steps.date.outputs.date }}-${{ steps.time.outputs.time }}"
-          draft: false
-          prerelease: false
+          token: ${{ secrets.GITHUB_TOKEN }}
+          release-type: simple
+          skip-github-pull-request: true
+          skip-github-release: true
+          skip-labeling: true
+      - name: TEST
+        run: |
+          echo "Release notes: ${{ toJson(steps.release-please.outputs) }}"
