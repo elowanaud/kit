@@ -71,7 +71,7 @@ export function PhoneInput(props: PhoneInputProps) {
 
 const CountrySelector = (props: ReactInternationalPhoneCountrySelectorProps) => (
 	<ReactInternationalPhoneCountrySelector
-		className="flex pointer-events-auto"
+		className="pointer-events-auto flex"
 		flagStyle={{
 			width: "1rem",
 			height: "1rem",

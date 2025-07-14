@@ -13,7 +13,7 @@ function FieldLabel(props: ComponentProps<"label"> & { required?: boolean }) {
 	return (
 		<label
 			className={cn(
-				"font-medium text-sm text-neutral-12",
+				"font-medium text-neutral-12 text-sm",
 				{
 					"before:pr-0.5 before:text-red-9 before:content-['*']": required,
 				},
@@ -28,13 +28,13 @@ Field.Label = FieldLabel;
 function FieldDescription(props: ComponentProps<"span">) {
 	const { className, ...otherProps } = props;
 
-	return <span className={cn("text-sm text-neutral-11", className)} {...otherProps} />;
+	return <span className={cn("text-neutral-11 text-sm", className)} {...otherProps} />;
 }
 Field.Description = FieldDescription;
 
 function FieldError(props: ComponentProps<"span">) {
 	const { className, ...otherProps } = props;
 
-	return <span className={cn("text-sm text-red-9", className)} {...otherProps} />;
+	return <span className={cn("text-red-9 text-sm", className)} {...otherProps} />;
 }
 Field.Error = FieldError;

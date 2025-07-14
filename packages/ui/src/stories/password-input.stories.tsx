@@ -40,9 +40,9 @@ const meta = {
 			},
 			options: ["Search", "Letter", "Calendar"],
 			mapping: {
-				Search: <SearchIcon className="w-4 h-4" />,
-				Letter: <MailIcon className="w-4 h-4" />,
-				Calendar: <CalendarIcon className="w-4 h-4" />,
+				Search: <SearchIcon className="size-4" />,
+				Letter: <MailIcon className="size-4" />,
+				Calendar: <CalendarIcon className="size-4" />,
 			},
 		},
 	},

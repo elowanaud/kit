@@ -6,7 +6,7 @@ import { AnimatePresence, domAnimation, LazyMotion } from "motion/react";
 import * as m from "motion/react-m";
 
 const buttonVariants = cva(
-	"relative inline-flex w-fit items-center justify-center gap-2 overflow-hidden font-medium outline-none transition-colors disabled:cursor-not-allowed disabled:opacity-50",
+	"relative inline-flex w-fit items-center justify-center gap-2 overflow-hidden font-medium outline-none transition-all disabled:cursor-not-allowed disabled:opacity-50",
 	{
 		variants: {
 			variant: {

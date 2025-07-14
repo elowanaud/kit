@@ -15,12 +15,15 @@ function RadioItem(props: BaseUiRadio.Root.Props) {
 		<Field.Label className="flex items-center gap-2">
 			<BaseUiRadio.Root
 				className={cn(
-					"size-4 flex items-center justify-center rounded-full border border-neutral-7 bg-neutral-1 transition-colors hover:not-disabled:border-neutral-8 hover:not-disabled:bg-neutral-2 outline-none focus-visible:ring-2 focus-visible:ring-primary-7 focus-visible:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 aria-checked:bg-primary-9 aria-checked:border-primary-9 aria-checked:hover:not-disabled:border-primary-10 aria-checked:hover:not-disabled:bg-primary-10",
+					"group/radio flex size-4 items-center justify-center rounded-full border border-neutral-7 bg-neutral-1 outline-none transition-all hover:not-disabled:border-neutral-8 hover:not-disabled:bg-neutral-2 focus-visible:ring-2 focus-visible:ring-primary-7 focus-visible:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 aria-checked:border-primary-9 aria-checked:bg-primary-9 aria-checked:hover:not-disabled:border-primary-10 aria-checked:hover:not-disabled:bg-primary-10",
 					className,
 				)}
 				{...otherProps}
 			>
-				<BaseUiRadio.Indicator className="size-2 rounded-full bg-neutral-1" />
+				<BaseUiRadio.Indicator
+					keepMounted
+					className="size-2 scale-0 rounded-full bg-neutral-1 transition-transform group-aria-checked/radio:scale-none"
+				/>
 			</BaseUiRadio.Root>
 			{children}
 		</Field.Label>

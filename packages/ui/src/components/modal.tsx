@@ -59,7 +59,7 @@ function ModalContent(props: Omit<Dialog.Popup.Props, "render">) {
 						/>
 						<Dialog.Popup
 							className={cn(
-								"fixed inset-0 sm:m-auto mt-auto max-w-2xl h-fit w-full sm:w-[calc(100%-2rem)] bg-neutral-1 rounded-t-lg sm:rounded-lg p-4 border border-neutral-7",
+								"fixed inset-0 mt-auto h-fit w-full max-w-2xl rounded-t-lg border border-neutral-7 bg-neutral-1 p-4 sm:m-auto sm:w-[calc(100%-2rem)] sm:rounded-lg",
 								className,
 							)}
 							render={

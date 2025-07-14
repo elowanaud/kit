@@ -23,6 +23,14 @@
 			},
 			"a11y": {
 				"noLabelWithoutControl": "off"
+			},
+			"nursery": {
+				"useSortedClasses": {
+					"level": "warn",
+					"options": {
+						"functions": ["cn", "cva", "clsx"]
+					}
+				}
 			}
 		}
 	},

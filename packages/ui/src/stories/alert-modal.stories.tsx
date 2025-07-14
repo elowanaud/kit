@@ -17,15 +17,15 @@ export const Default: Story = {
 				<AlertModal.Trigger render={<Button />}>Open AlertModal</AlertModal.Trigger>
 				<AlertModal.Content className="grid gap-9">
 					<div className="grid gap-2">
-						<AlertModal.Title className="text-2xl font-bold">Lorem ipsum dolor sit amet.</AlertModal.Title>
-						<AlertModal.Description className="text-sm text-neutral-10">
+						<AlertModal.Title className="font-bold text-2xl">Lorem ipsum dolor sit amet.</AlertModal.Title>
+						<AlertModal.Description className="text-neutral-10 text-sm">
 							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, beatae. Nihil, pariatur! Sequi iste
 							officiis quos omnis perferendis, adipisci eos repudiandae est delectus blanditiis unde enim aut magnam
 							nemo iure!
 						</AlertModal.Description>
 					</div>
 
-					<div className="flex gap-2 justify-end flex-col sm:flex-row">
+					<div className="flex flex-col justify-end gap-2 sm:flex-row">
 						<AlertModal.Close render={<Button variant="outline" className="w-full sm:w-auto" />}>
 							Cancel
 						</AlertModal.Close>
