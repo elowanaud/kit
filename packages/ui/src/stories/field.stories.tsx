@@ -63,8 +63,10 @@ export const CheckboxField: Story = {
 					<Checkbox />
 					Accept terms and conditions
 				</Field.Label>
-				<Field.Description>By clicking on the button, you agree to the terms and conditions</Field.Description>
-				<Field.Error>You must accept the terms and conditions</Field.Error>
+				<Field.Description className="ml-6">
+					By clicking on the button, you agree to the terms and conditions
+				</Field.Description>
+				<Field.Error className="ml-6">You must accept the terms and conditions</Field.Error>
 			</Field>
 		);
 	},
@@ -74,14 +76,14 @@ export const CheckboxGroupField: Story = {
 	render: () => {
 		return (
 			<Field>
-				<Field.Label>Select your favorite color</Field.Label>
+				<Field.Label>Select your favorite colors</Field.Label>
 				<CheckboxGroup>
 					<CheckboxGroup.Item value="1">Red</CheckboxGroup.Item>
 					<CheckboxGroup.Item value="2">Green</CheckboxGroup.Item>
 					<CheckboxGroup.Item value="3">Blue</CheckboxGroup.Item>
 				</CheckboxGroup>
-				<Field.Description>Select your favorite color</Field.Description>
-				<Field.Error>You must select a color</Field.Error>
+				<Field.Description>Select your favorite colors</Field.Description>
+				<Field.Error>You must select at least one color</Field.Error>
 			</Field>
 		);
 	},
