@@ -1,4 +1,5 @@
 import { Checkbox } from "@kit/ui/components/checkbox";
+import { CheckboxGroup } from "@kit/ui/components/checkbox-group";
 import { Field } from "@kit/ui/components/field";
 import { Input } from "@kit/ui/components/input";
 import { PasswordInput } from "@kit/ui/components/password-input";
@@ -60,20 +61,11 @@ export const CheckboxGroupField: Story = {
 		return (
 			<Field>
 				<Field.Label htmlFor="field-checkbox-group">Label</Field.Label>
-				<div className="grid gap-1">
-					<Field.Label className="flex items-center gap-2">
-						<Checkbox id="field-checkbox-group-1" />
-						Option 1
-					</Field.Label>
-					<Field.Label className="flex items-center gap-2">
-						<Checkbox id="field-checkbox-group-2" />
-						Option 2
-					</Field.Label>
-					<Field.Label className="flex items-center gap-2">
-						<Checkbox id="field-checkbox-group-3" />
-						Option 3
-					</Field.Label>
-				</div>
+				<CheckboxGroup>
+					<CheckboxGroup.Item value="1">Option 1</CheckboxGroup.Item>
+					<CheckboxGroup.Item value="2">Option 2</CheckboxGroup.Item>
+					<CheckboxGroup.Item value="3">Option 3</CheckboxGroup.Item>
+				</CheckboxGroup>
 				<Field.Description>Description</Field.Description>
 				<Field.Error>Error</Field.Error>
 			</Field>
