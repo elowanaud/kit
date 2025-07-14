@@ -30,8 +30,7 @@ jobs:
               repo: context.repo.repo,
               tag_name: "V${{ steps.date.outputs.date }}-${{ steps.time.outputs.time }}",
               name: "V${{ steps.date.outputs.date }}-${{ steps.time.outputs.time }}",
-              draft: "false",
-              prerelease: "false",
-              generate_release_notes: "true",
-              make_latest: "true",
+              draft: "0",
+              prerelease: "0",
+              generate_release_notes: "1",
             })
