@@ -24,6 +24,8 @@
 		"google-libphonenumber": "^3.2.42",
 		"motion": "^12.23.5",
 		"react-international-phone": "^4.6.0",
+		"lucide-react": "^0.525.0",
+		"react-select": "^5.10.2",
 		"tailwind-merge": "^3.3.1"
 	},
 	"devDependencies": {
@@ -36,7 +38,6 @@
 		"@types/react-dom": "^19.1.6",
 		"@vitejs/plugin-react-swc": "^3.10.2",
 		"globals": "^16.2.0",
-		"lucide-react": "^0.525.0",
 		"storybook": "^9.0.15",
 		"typescript": "^5.8.3",
 		"vite": "^7.0.0"
