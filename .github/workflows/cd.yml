@@ -24,14 +24,22 @@ jobs:
       - uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |            
+          script: |
+            const lastRelease = await github.rest.repos.getLatestRelease({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            })
+            console.log(lastRelease)
+
+            return
+            
             await github.rest.repos.createRelease({
               owner: context.repo.owner,
               repo: context.repo.repo,
               tag_name: "V${{ steps.date.outputs.date }}-${{ steps.time.outputs.time }}",
               name: "V${{ steps.date.outputs.date }}-${{ steps.time.outputs.time }}",
-              draft: false,
-              prerelease: false,
-              generate_release_notes: true,
-              make_latest: true,
+              draft: "false",
+              prerelease: "false",
+              generate_release_notes: "true",
+              make_latest: "true",
             })
