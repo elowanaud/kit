@@ -66,4 +66,34 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Playground: Story = {};
+export const Default: Story = {};
+
+export const WithPlaceholder: Story = {
+	args: {
+		placeholder: "Placeholder",
+	},
+};
+
+export const Filled: Story = {
+	args: {
+		value: "Value",
+	},
+};
+
+export const Disabled: Story = {
+	args: {
+		disabled: true,
+	},
+};
+
+export const WithLeftIcon: Story = {
+	args: {
+		leftIcon: "Search",
+	},
+};
+
+export const WithRightIcon: Story = {
+	args: {
+		rightIcon: "Calendar",
+	},
+};

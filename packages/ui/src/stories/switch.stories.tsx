@@ -1,8 +1,6 @@
 import { Switch } from "@kit/ui/components/switch";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-const STATES = ["default", "checked", "disabled", "checked-disabled"] as const;
-
 const meta = {
 	title: "Data Entry / Switch",
 	component: Switch,
@@ -29,16 +27,23 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Playground: Story = {};
+export const Default: Story = {};
 
-export const Preview: Story = {
-	render: () => {
-		return (
-			<section className="flex gap-4">
-				{STATES.map((state) => (
-					<Switch key={state} checked={state.includes("checked")} disabled={state.includes("disabled")} />
-				))}
-			</section>
-		);
+export const Checked: Story = {
+	args: {
+		checked: true,
+	},
+};
+
+export const Disabled: Story = {
+	args: {
+		disabled: true,
+	},
+};
+
+export const CheckedDisabled: Story = {
+	args: {
+		checked: true,
+		disabled: true,
 	},
 };

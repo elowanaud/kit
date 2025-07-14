@@ -2,6 +2,7 @@ import { Checkbox } from "@kit/ui/components/checkbox";
 import { Field } from "@kit/ui/components/field";
 import { Input } from "@kit/ui/components/input";
 import { PasswordInput } from "@kit/ui/components/password-input";
+import { Radio } from "@kit/ui/components/radio";
 import { Switch } from "@kit/ui/components/switch";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
@@ -47,6 +48,8 @@ export const CheckboxField: Story = {
 					<Checkbox id="field-checkbox" />
 					Label
 				</Field.Label>
+				<Field.Description>Description</Field.Description>
+				<Field.Error>Error</Field.Error>
 			</Field>
 		);
 	},
@@ -71,6 +74,23 @@ export const CheckboxGroupField: Story = {
 						Option 3
 					</Field.Label>
 				</div>
+				<Field.Description>Description</Field.Description>
+				<Field.Error>Error</Field.Error>
+			</Field>
+		);
+	},
+};
+
+export const RadioField: Story = {
+	render: () => {
+		return (
+			<Field>
+				<Field.Label htmlFor="field-radio">Label</Field.Label>
+				<Radio>
+					<Radio.Item value="1">Option 1</Radio.Item>
+					<Radio.Item value="2">Option 2</Radio.Item>
+					<Radio.Item value="3">Option 3</Radio.Item>
+				</Radio>
 				<Field.Description>Description</Field.Description>
 				<Field.Error>Error</Field.Error>
 			</Field>

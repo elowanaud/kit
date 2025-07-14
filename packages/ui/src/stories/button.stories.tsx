@@ -4,7 +4,6 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 
 const VARIANTS = ["primary", "outline", "ghost", "destructive", "link"] as const;
 const SIZES = ["md", "icon-sm", "icon-md"] as const;
-const STATES = ["default", "loading", "disabled"] as const;
 
 const meta = {
 	title: "General/Button",
@@ -68,45 +67,77 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Playground: Story = {
+export const Primary: Story = {
 	args: {
 		children: "Button",
-		variant: "primary",
-		size: "md",
 	},
 };
 
-export const Preview: Story = {
-	render: () => {
-		return (
-			<main className="grid gap-16">
-				{VARIANTS.map((variant) => (
-					<section key={variant} className="grid gap-4">
-						<h1 className="font-bold text-2xl">{variant.charAt(0).toUpperCase() + variant.slice(1)}</h1>
-						{SIZES.map((size) => (
-							<article key={`${variant}_${size}`} className="flex gap-2">
-								{STATES.map((state) => (
-									<Button
-										key={`${variant}_${size}_{${state}}`}
-										variant={variant}
-										size={size}
-										loading={state === "loading"}
-										disabled={state === "disabled"}
-									>
-										{size.startsWith("icon") ? (
-											<BoxIcon />
-										) : (
-											<>
-												<BoxIcon /> {variant.charAt(0).toUpperCase() + variant.slice(1)}
-											</>
-										)}
-									</Button>
-								))}
-							</article>
-						))}
-					</section>
-				))}
-			</main>
-		);
+export const Outline: Story = {
+	args: {
+		children: "Button",
+		variant: "outline",
+	},
+};
+
+export const Ghost: Story = {
+	args: {
+		children: "Button",
+		variant: "ghost",
+	},
+};
+
+export const Destructive: Story = {
+	args: {
+		children: "Button",
+		variant: "destructive",
+	},
+};
+
+export const Link: Story = {
+	args: {
+		children: "Button",
+		variant: "link",
+	},
+};
+
+export const WithIcon: Story = {
+	args: {
+		children: (
+			<>
+				<BoxIcon /> Button
+			</>
+		),
+		variant: "primary",
+	},
+};
+
+export const IconSize: Story = {
+	args: {
+		children: <BoxIcon />,
+		variant: "primary",
+		size: "icon-md",
+	},
+};
+
+export const SmallIconSize: Story = {
+	args: {
+		children: <BoxIcon />,
+		variant: "primary",
+		size: "icon-sm",
+	},
+};
+
+export const Disabled: Story = {
+	args: {
+		children: "Button",
+		disabled: true,
+	},
+};
+
+export const Loading: Story = {
+	args: {
+		children: "Button",
+		loading: true,
 	},
 };

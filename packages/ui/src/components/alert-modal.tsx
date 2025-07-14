@@ -56,7 +56,7 @@ function AlertModalContent(props: Omit<AlertDialog.Popup.Props, "render">) {
 						/>
 						<AlertDialog.Popup
 							className={cn(
-								"fixed inset-0 sm:m-auto mt-auto max-w-2xl h-fit w-full sm:w-[calc(100%-2rem)] bg-neutral-1 rounded-t-lg sm:rounded-lg p-4 border border-neutral-7",
+								"fixed inset-0 sm:m-auto mt-auto sm:max-w-lg h-fit w-full sm:w-[calc(100%-2rem)] bg-neutral-1 rounded-t-lg sm:rounded-lg p-4 border border-neutral-7",
 								className,
 							)}
 							render={
