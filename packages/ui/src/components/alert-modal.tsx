@@ -73,7 +73,7 @@ function AlertModalContent(props: Omit<AlertDialog.Popup.Props, "render">) {
 									}}
 									exit={{
 										y: isMobile ? "100%" : 0,
-										opacity: isMobile ? 1 : 0,
+										opacity: isMobile ? 0.99 : 0,
 										scale: isMobile ? 1 : 0.95,
 									}}
 									transition={{

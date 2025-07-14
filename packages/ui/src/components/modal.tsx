@@ -49,7 +49,11 @@ function ModalContent(props: Omit<Dialog.Popup.Props, "render">) {
 									initial={{ opacity: 0 }}
 									animate={{ opacity: 1 }}
 									exit={{ opacity: 0 }}
-									transition={{ duration: isMobile ? 0.2 : 0.15 }}
+									transition={{
+										type: "tween",
+										ease: "easeOut",
+										duration: isMobile ? 0.2 : 0.15,
+									}}
 								/>
 							}
 						/>
@@ -67,12 +71,12 @@ function ModalContent(props: Omit<Dialog.Popup.Props, "render">) {
 									}}
 									animate={{
 										y: 0,
-										opacity: isMobile ? 1 : 1,
-										scale: isMobile ? 1 : 1,
+										opacity: 1,
+										scale: 1,
 									}}
 									exit={{
 										y: isMobile ? "100%" : 0,
-										opacity: isMobile ? 1 : 0,
+										opacity: isMobile ? 0.99 : 0,
 										scale: isMobile ? 1 : 0.95,
 									}}
 									transition={{

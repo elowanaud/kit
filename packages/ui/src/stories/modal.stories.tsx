@@ -25,7 +25,9 @@ export const Default: Story = {
 						</Modal.Description>
 					</div>
 
-					<Modal.Close render={<Button />}>Submit</Modal.Close>
+					<Modal.Close className="w-full sm:w-fit" render={<Button />}>
+						Submit
+					</Modal.Close>
 				</Modal.Content>
 			</Modal>
 		);

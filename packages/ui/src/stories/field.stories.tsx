@@ -6,6 +6,7 @@ import { PasswordInput } from "@kit/ui/components/password-input";
 import { Radio } from "@kit/ui/components/radio";
 import { Switch } from "@kit/ui/components/switch";
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import { PhoneInput } from "../components/phone-input";
 
 const meta = {
 	title: "Data Entry/Field",
@@ -19,10 +20,10 @@ export const InputField: Story = {
 	render: () => {
 		return (
 			<Field>
-				<Field.Label htmlFor="field-input">Label</Field.Label>
-				<Input id="field-input" />
-				<Field.Description>Description</Field.Description>
-				<Field.Error>Error</Field.Error>
+				<Field.Label htmlFor="input">Email</Field.Label>
+				<Input type="email" id="input" />
+				<Field.Description>Enter your email</Field.Description>
+				<Field.Error>Invalid email</Field.Error>
 			</Field>
 		);
 	},
@@ -32,10 +33,23 @@ export const PasswordField: Story = {
 	render: () => {
 		return (
 			<Field>
-				<Field.Label htmlFor="field-password">Label</Field.Label>
-				<PasswordInput id="field-password" />
-				<Field.Description>Description</Field.Description>
-				<Field.Error>Error</Field.Error>
+				<Field.Label htmlFor="password">Password</Field.Label>
+				<PasswordInput id="password" />
+				<Field.Description>Enter your password</Field.Description>
+				<Field.Error>Invalid password</Field.Error>
+			</Field>
+		);
+	},
+};
+
+export const PhoneField: Story = {
+	render: () => {
+		return (
+			<Field>
+				<Field.Label htmlFor="phoneNumber">Phone Number</Field.Label>
+				<PhoneInput id="phoneNumber" defaultCountry="fr" />
+				<Field.Description>Enter your phone number</Field.Description>
+				<Field.Error>Invalid phone number</Field.Error>
 			</Field>
 		);
 	},
@@ -45,12 +59,12 @@ export const CheckboxField: Story = {
 	render: () => {
 		return (
 			<Field>
-				<Field.Label htmlFor="field-checkbox" className="flex items-center gap-2">
-					<Checkbox id="field-checkbox" />
-					Label
+				<Field.Label className="flex items-center gap-2">
+					<Checkbox />
+					Accept terms and conditions
 				</Field.Label>
-				<Field.Description>Description</Field.Description>
-				<Field.Error>Error</Field.Error>
+				<Field.Description>By clicking on the button, you agree to the terms and conditions</Field.Description>
+				<Field.Error>You must accept the terms and conditions</Field.Error>
 			</Field>
 		);
 	},
@@ -60,14 +74,14 @@ export const CheckboxGroupField: Story = {
 	render: () => {
 		return (
 			<Field>
-				<Field.Label htmlFor="field-checkbox-group">Label</Field.Label>
+				<Field.Label>Select your favorite color</Field.Label>
 				<CheckboxGroup>
-					<CheckboxGroup.Item value="1">Option 1</CheckboxGroup.Item>
-					<CheckboxGroup.Item value="2">Option 2</CheckboxGroup.Item>
-					<CheckboxGroup.Item value="3">Option 3</CheckboxGroup.Item>
+					<CheckboxGroup.Item value="1">Red</CheckboxGroup.Item>
+					<CheckboxGroup.Item value="2">Green</CheckboxGroup.Item>
+					<CheckboxGroup.Item value="3">Blue</CheckboxGroup.Item>
 				</CheckboxGroup>
-				<Field.Description>Description</Field.Description>
-				<Field.Error>Error</Field.Error>
+				<Field.Description>Select your favorite color</Field.Description>
+				<Field.Error>You must select a color</Field.Error>
 			</Field>
 		);
 	},
@@ -77,14 +91,14 @@ export const RadioField: Story = {
 	render: () => {
 		return (
 			<Field>
-				<Field.Label htmlFor="field-radio">Label</Field.Label>
+				<Field.Label>Select your favorite fruit</Field.Label>
 				<Radio>
-					<Radio.Item value="1">Option 1</Radio.Item>
-					<Radio.Item value="2">Option 2</Radio.Item>
-					<Radio.Item value="3">Option 3</Radio.Item>
+					<Radio.Item value="1">Apple</Radio.Item>
+					<Radio.Item value="2">Banana</Radio.Item>
+					<Radio.Item value="3">Orange</Radio.Item>
 				</Radio>
-				<Field.Description>Description</Field.Description>
-				<Field.Error>Error</Field.Error>
+				<Field.Description>Select your favorite fruit</Field.Description>
+				<Field.Error>You must select a fruit</Field.Error>
 			</Field>
 		);
 	},
@@ -94,9 +108,9 @@ export const SwitchField: Story = {
 	render: () => {
 		return (
 			<Field>
-				<Field.Label htmlFor="field-switch" className="flex items-center gap-2">
-					<Switch id="field-switch" />
-					Label
+				<Field.Label className="flex items-center gap-2">
+					<Switch />
+					Enable notifications
 				</Field.Label>
 			</Field>
 		);

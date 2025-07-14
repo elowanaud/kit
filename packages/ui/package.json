@@ -21,13 +21,16 @@
 		"@base-ui-components/react": "1.0.0-beta.1",
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
-		"motion": "^12.23.3",
+		"google-libphonenumber": "^3.2.42",
+		"motion": "^12.23.5",
+		"react-international-phone": "^4.6.0",
 		"tailwind-merge": "^3.3.1"
 	},
 	"devDependencies": {
 		"@storybook/addon-docs": "^9.0.15",
 		"@storybook/react-vite": "^9.0.15",
 		"@tailwindcss/vite": "^4.1.11",
+		"@types/google-libphonenumber": "^7.4.30",
 		"@types/node": "^24.0.7",
 		"@types/react": "^19.1.8",
 		"@types/react-dom": "^19.1.6",
