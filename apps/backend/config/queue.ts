@@ -1,5 +1,5 @@
 import { defineConfig } from "@rlanz/bull-queue";
-import env from "#start/env";
+import env from "#config/env";
 
 export default defineConfig({
 	defaultConnection: {

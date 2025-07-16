@@ -1,6 +1,6 @@
 import app from "@adonisjs/core/services/app";
 import { defineConfig } from "@rlanz/sentry";
-import env from "#start/env";
+import env from "#config/env";
 
 export default defineConfig({
 	/**

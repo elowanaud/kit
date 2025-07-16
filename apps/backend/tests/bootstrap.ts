@@ -6,7 +6,7 @@ import { apiClient } from "@japa/api-client";
 import { assert } from "@japa/assert";
 import { pluginAdonisJS } from "@japa/plugin-adonisjs";
 import type { Config } from "@japa/runner/types";
-import env from "#start/env";
+import env from "#config/env";
 
 /**
  * This file is imported by the "bin/test.ts" entrypoint file
