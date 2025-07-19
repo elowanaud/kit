@@ -13,16 +13,16 @@ const buttonVariants = cva(
 				primary:
 					"bg-primary-9 text-primary-contrast hover:not-disabled:bg-primary-10 focus-visible:ring-2 focus-visible:ring-primary-7 focus-visible:ring-offset-1",
 				outline:
-					"border border-neutral-7 bg-neutral-1 text-black hover:not-disabled:border-neutral-8 hover:not-disabled:bg-neutral-2 focus-visible:ring-2 focus-visible:ring-neutral-7 focus-visible:ring-offset-1",
-				ghost: "bg-transparent text-black hover:not-disabled:bg-neutral-3 focus-visible:bg-neutral-3",
+					"border border-neutral-7 bg-neutral-1 text-neutral-12 hover:not-disabled:border-neutral-8 hover:not-disabled:bg-neutral-2 focus-visible:ring-2 focus-visible:ring-neutral-7 focus-visible:ring-offset-1",
+				ghost: "bg-transparent text-neutral-12 hover:not-disabled:bg-neutral-3 focus-visible:bg-neutral-3",
 				destructive:
-					"bg-red-9 text-white hover:not-disabled:bg-red-10 focus-visible:ring-2 focus-visible:ring-red-7 focus-visible:ring-offset-1",
+					"bg-red-9 text-primary-1 hover:not-disabled:bg-red-10 focus-visible:ring-2 focus-visible:ring-red-7 focus-visible:ring-offset-1",
 				link: "text-primary-9 hover:not-disabled:text-primary-10 hover:not-disabled:underline focus-visible:underline",
 			},
 			size: {
-				md: "h-9 rounded-md px-3 text-sm [&_svg]:size-5",
-				"icon-sm": "size-6 rounded-sm text-xs [&_svg]:size-4",
-				"icon-md": "size-9 rounded-md text-sm [&_svg]:size-5",
+				md: "h-9 rounded-lg px-3 text-sm [&_svg]:size-5",
+				"icon-sm": "size-6 rounded-md text-xs [&_svg]:size-4",
+				"icon-md": "size-9 rounded-lg text-sm [&_svg]:size-5",
 			},
 			loading: {
 				true: "disabled:cursor-progress disabled:opacity-100",

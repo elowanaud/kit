@@ -78,7 +78,7 @@ const CountrySelector = (props: ReactInternationalPhoneCountrySelectorProps) => 
 			display: "none",
 		}}
 		renderButtonWrapper={({ children, rootProps }) => (
-			<Button variant="ghost" size="icon-sm" className="right-0.5" {...rootProps}>
+			<Button variant="ghost" size="icon-sm" {...rootProps}>
 				{children}
 			</Button>
 		)}

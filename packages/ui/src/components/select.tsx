@@ -95,7 +95,7 @@ function classNames<
 	return {
 		control: ({ isFocused, isDisabled }) =>
 			clsx(
-				"min-h-9! rounded-sm border border-neutral-7 bg-neutral-1 px-1.5 py-1 text-base text-neutral-12 transition-all hover:border-neutral-8 sm:text-sm",
+				"min-h-9! rounded-lg border border-neutral-7 bg-neutral-1 px-1.5 py-1 text-base text-neutral-12 transition-all hover:border-neutral-8 hover:bg-neutral-2 sm:text-sm",
 				{
 					"border-primary-7 ring-2 ring-primary-7 hover:border-primary-7": isFocused,
 					"opacity-50": isDisabled,
@@ -103,13 +103,14 @@ function classNames<
 			),
 		placeholder: () => "text-neutral-9",
 		valueContainer: () => "gap-1 text-neutral-12",
-		menu: () => "mt-1 p-1 rounded-md border border-neutral-7 bg-neutral-1 text-base sm:text-sm ",
+		menu: () => "mt-1 p-1 rounded-lg border border-neutral-7 bg-neutral-1 text-base sm:text-sm ",
 		menuList: () => "max-h-40!",
 		option: ({ isSelected }) =>
 			clsx("transistion-colors rounded-sm px-3 py-1 text-neutral-12 hover:bg-neutral-4", {
 				"bg-primary-3 hover:bg-primary-4": isSelected,
 			}),
-		multiValue: () => "gap-1 rounded-sm bg-primary-9 text-primary-contrast text-sm px-2 py-0.5",
+		dropdownIndicator: () => "size-6 flex items-center justify-center text-neutral-11 [&>svg]:size-4",
+		multiValue: () => "gap-1 rounded-md bg-primary-9 text-primary-contrast text-sm px-2 py-0.5",
 		multiValueRemove: () => "cursor-pointer",
 	};
 }
@@ -122,11 +123,7 @@ function components<Option, IsMulti extends boolean = false, Group extends Group
 	return {
 		DropdownIndicator: ({ children, ...props }) => (
 			<ReactSelectComponents.DropdownIndicator {...props}>
-				{props.isFocused && isSearchable ? (
-					<SearchIcon className="size-5 text-neutral-11" />
-				) : (
-					<ChevronDownIcon className="size-5 text-neutral-11" />
-				)}
+				{props.isFocused && isSearchable ? <SearchIcon /> : <ChevronDownIcon />}
 			</ReactSelectComponents.DropdownIndicator>
 		),
 		ClearIndicator: () => null,

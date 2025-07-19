@@ -17,7 +17,7 @@ export function PasswordInput(props: PasswordInputProps) {
 					pressed={isPasswordReadable}
 					onPressedChange={(pressed) => setIsPasswordReadable(pressed)}
 					disabled={props.disabled}
-					className="pointer-events-auto left-0.5"
+					className="pointer-events-auto"
 					render={
 						<Button variant="ghost" size="icon-sm">
 							{isPasswordReadable ? <EyeOffIcon /> : <EyeIcon />}
