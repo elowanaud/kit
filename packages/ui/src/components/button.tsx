@@ -20,9 +20,9 @@ const buttonVariants = cva(
 				link: "text-primary-9 hover:not-disabled:text-primary-10 hover:not-disabled:underline focus-visible:underline",
 			},
 			size: {
-				md: "h-8 rounded-md px-3 text-sm [&_svg]:size-4",
-				"icon-sm": "size-6 rounded-sm text-xs [&_svg]:size-3",
-				"icon-md": "size-8 rounded-md text-sm [&_svg]:size-4",
+				md: "h-9 rounded-md px-3 text-sm [&_svg]:size-5",
+				"icon-sm": "size-6 rounded-sm text-xs [&_svg]:size-4",
+				"icon-md": "size-9 rounded-md text-sm [&_svg]:size-5",
 			},
 			loading: {
 				true: "disabled:cursor-progress disabled:opacity-100",

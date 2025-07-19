@@ -15,10 +15,10 @@ export function Input(props: InputProps) {
 				"opacity-50": props.disabled,
 			})}
 		>
-			<span className="pointer-events-none absolute left-1.5 text-neutral-11 [&>svg]:size-5">{leftIcon}</span>
+			<span className="pointer-events-none absolute left-1.5 flex text-neutral-11 [&>svg]:size-5">{leftIcon}</span>
 			<input
 				className={cn(
-					"h-8 flex-1 rounded-sm border border-neutral-7 bg-neutral-1 px-1.5 text-base text-neutral-12 outline-none transition-all placeholder:text-neutral-9 hover:not-disabled:border-neutral-8 focus-visible:border-primary-7 focus-visible:ring-2 focus-visible:ring-primary-7 focus-visible:hover:border-primary-8 disabled:cursor-not-allowed sm:text-sm",
+					"h-9 flex-1 rounded-sm border border-neutral-7 bg-neutral-1 px-1.5 text-base text-neutral-12 outline-none transition-all placeholder:text-neutral-9 hover:not-disabled:border-neutral-8 focus-visible:border-primary-7 focus-visible:ring-2 focus-visible:ring-primary-7 focus-visible:hover:border-primary-7 disabled:cursor-not-allowed sm:text-sm",
 					{
 						"pl-7": leftIcon,
 						"pr-7": rightIcon,
@@ -27,7 +27,7 @@ export function Input(props: InputProps) {
 				)}
 				{...otherProps}
 			/>
-			<span className="pointer-events-none absolute right-1.5 text-neutral-11 [&>svg]:size-5">{rightIcon}</span>
+			<span className="pointer-events-none absolute right-1.5 flex text-neutral-11 [&>svg]:size-5">{rightIcon}</span>
 		</div>
 	);
 }

@@ -7,6 +7,7 @@ import { Radio } from "@kit/ui/components/radio";
 import { Switch } from "@kit/ui/components/switch";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { PhoneInput } from "../components/phone-input";
+import { Select } from "../components/select";
 
 const meta = {
 	title: "Data Entry/Field",
@@ -50,6 +51,33 @@ export const PhoneField: Story = {
 				<PhoneInput id="phoneNumber" defaultCountry="fr" />
 				<Field.Description>Enter your phone number</Field.Description>
 				<Field.Error>Invalid phone number</Field.Error>
+			</Field>
+		);
+	},
+};
+
+export const SelectField: Story = {
+	render: () => {
+		return (
+			<Field>
+				<Field.Label htmlFor="select">Select</Field.Label>
+				<Select
+					id="select"
+					options={[
+						{ label: "Option 1", value: "option1" },
+						{ label: "Option 2", value: "option2" },
+						{ label: "Option 3", value: "option3" },
+						{ label: "Option 4", value: "option4" },
+						{ label: "Option 5", value: "option5" },
+						{ label: "Option 6", value: "option6" },
+						{ label: "Option 7", value: "option7" },
+						{ label: "Option 8", value: "option8" },
+						{ label: "Option 9", value: "option9" },
+					]}
+					className="min-w-56"
+				/>
+				<Field.Description>Select an option</Field.Description>
+				<Field.Error>Invalid option</Field.Error>
 			</Field>
 		);
 	},
