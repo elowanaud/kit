@@ -1,5 +1,3 @@
-"use client";
-
 import {
 	CountrySelector as ReactInternationalPhoneCountrySelector,
 	type CountrySelectorProps as ReactInternationalPhoneCountrySelectorProps,

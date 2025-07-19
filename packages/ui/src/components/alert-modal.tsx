@@ -1,5 +1,3 @@
-"use client";
-
 import { AlertDialog } from "@base-ui-components/react";
 import { useMediaQuery } from "@base-ui-components/react/unstable-use-media-query";
 import { Button } from "@kit/ui/components/button";
