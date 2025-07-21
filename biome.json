@@ -28,7 +28,7 @@
 				"useSortedClasses": {
 					"level": "warn",
 					"options": {
-						"functions": ["cn", "cva", "clsx"]
+						"functions": ["cn", "cva", "clsx", "classNames"]
 					}
 				}
 			}

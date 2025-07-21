@@ -22,10 +22,11 @@
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
 		"google-libphonenumber": "^3.2.42",
+		"lucide-react": "^0.525.0",
 		"motion": "^12.23.5",
 		"react-international-phone": "^4.6.0",
-		"lucide-react": "^0.525.0",
 		"react-select": "^5.10.2",
+		"sonner": "^2.0.6",
 		"tailwind-merge": "^3.3.1"
 	},
 	"devDependencies": {

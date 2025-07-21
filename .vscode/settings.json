@@ -24,7 +24,7 @@
 	"files.associations": {
 		"*.css": "tailwindcss"
 	},
-	"tailwindCSS.classFunctions": ["cn", "cva"],
+	"tailwindCSS.classFunctions": ["cn", "cva", "classNames"],
 
 	// TypeScript Settings
 	"typescript.tsdk": "node_modules/typescript/lib",
