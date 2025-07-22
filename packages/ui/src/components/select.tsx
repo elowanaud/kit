@@ -103,10 +103,10 @@ function classNames<
 			),
 		placeholder: () => "text-neutral-9",
 		valueContainer: () => "gap-1 text-neutral-12",
-		menu: () => "mt-1 p-1 rounded-lg border border-neutral-7 bg-neutral-1 text-base sm:text-sm ",
+		menu: () => "mt-1 p-1 rounded-lg shadow border border-neutral-7 bg-neutral-1 text-base sm:text-sm ",
 		menuList: () => "max-h-40!",
 		option: ({ isSelected }) =>
-			clsx("transistion-colors rounded-sm px-3 py-1 text-neutral-12 hover:bg-neutral-4", {
+			clsx("transistion-colors rounded-sm px-3 py-1 text-neutral-12 text-sm/normal hover:bg-neutral-4", {
 				"bg-primary-3 hover:bg-primary-4": isSelected,
 			}),
 		dropdownIndicator: () => "size-6 flex items-center justify-center text-neutral-11 [&>svg]:size-4",
