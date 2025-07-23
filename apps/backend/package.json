@@ -11,6 +11,9 @@
 		"test:watch": "node ace test --watch",
 		"tsc": "tsc --noEmit"
 	},
+	"exports": {
+		"./api": "./.adonisjs/index.ts"
+	},
 	"imports": {
 		"#controllers/*": "./src/controllers/*.js",
 		"#exceptions/*": "./src/exceptions/*.js",
@@ -40,6 +43,8 @@
 		"@adonisjs/session": "^7.5.1",
 		"@rlanz/bull-queue": "^3.1.0",
 		"@rlanz/sentry": "^0.3.3",
+		"@tuyau/core": "^0.4.2",
+		"@tuyau/superjson": "^0.1.2",
 		"@vinejs/vine": "^3.0.1",
 		"luxon": "^3.6.1",
 		"pg": "^8.16.3",
@@ -53,6 +58,7 @@
 		"@japa/plugin-adonisjs": "^4.0.0",
 		"@japa/runner": "^4.2.0",
 		"@swc/core": "1.12.14",
+		"@tuyau/utils": "^0.0.9",
 		"@types/luxon": "^3.6.2",
 		"@types/node": "^>=22.0.0 <23.0.0",
 		"c8": "^10.1.3",

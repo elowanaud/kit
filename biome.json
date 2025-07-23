@@ -1,7 +1,16 @@
 {
 	"$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
 	"files": {
-		"includes": ["**", "!.next/**", "!node_modules/**", "!dist/**", "!build/**", "!.turbo/**", "!coverage/**"]
+		"includes": [
+			"**",
+			"!.next/**",
+			"!node_modules/**",
+			"!dist/**",
+			"!build/**",
+			"!.turbo/**",
+			"!coverage/**",
+			"!.adonisjs/**"
+		]
 	},
 	"formatter": {
 		"enabled": true,

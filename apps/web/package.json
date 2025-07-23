@@ -8,16 +8,28 @@
 		"tsc": "tsc --noEmit"
 	},
 	"dependencies": {
+		"@hookform/resolvers": "^5.1.1",
+		"@kit/backend": "workspace:*",
+		"@kit/ui": "workspace:*",
+		"@tanstack/react-query": "^5.83.0",
+		"@tuyau/client": "^0.2.10",
+		"@tuyau/superjson": "^0.1.2",
+		"deepmerge-json": "^1.5.0",
+		"next": "15.4.3",
+		"next-intl": "^4.3.4",
+		"nuqs": "^2.4.3",
 		"react": "19.1.0",
 		"react-dom": "19.1.0",
-		"next": "15.4.3"
+		"react-hook-form": "^7.60.0",
+		"zod": "^4.0.5"
 	},
 	"devDependencies": {
-		"typescript": "^5.8.3",
+		"@tailwindcss/postcss": "^4.1.11",
+		"@tanstack/react-query-devtools": "^5.83.0",
 		"@types/node": "^>=22.0.0 <23.0.0",
 		"@types/react": "^19.1.8",
 		"@types/react-dom": "^19.1.6",
-		"@tailwindcss/postcss": "^4.1.11",
-		"tailwindcss": "^4.1.11"
+		"tailwindcss": "^4.1.11",
+		"typescript": "^5.8.3"
 	}
 }
