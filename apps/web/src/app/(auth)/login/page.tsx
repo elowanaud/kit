@@ -1,4 +1,4 @@
-import { Form } from "./client";
+import { LoginForm } from "@/features/auth/login/components/form";
 
 type LoginProps = {
 	searchParams: Promise<{
@@ -11,7 +11,7 @@ export default async function Login(props: LoginProps) {
 
 	return (
 		<div>
-			<Form redirectUrl={redirectUrl} />
+			<LoginForm redirectUrl={redirectUrl} />
 		</div>
 	);
 }
