@@ -38,6 +38,7 @@ export function Select<Option, IsMulti extends boolean = false, Group extends Gr
 			closeMenuOnSelect={!isMulti}
 			blurInputOnSelect={!isMulti}
 			isSearchable={isSearchable}
+			menuPortalTarget={document.body}
 			classNames={classNames<Option, IsMulti, Group>()}
 			components={components<Option, IsMulti, Group>({ isSearchable })}
 			{...otherProps}
@@ -77,6 +78,7 @@ export function AsyncSelect<
 			backspaceRemovesValue
 			closeMenuOnSelect={!isMulti}
 			blurInputOnSelect={!isMulti}
+			menuPortalTarget={document.body}
 			cacheOptions
 			defaultOptions={defaultOptions}
 			isSearchable={isSearchable}

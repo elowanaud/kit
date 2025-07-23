@@ -2,7 +2,7 @@ import { Button } from "@kit/ui/components/button";
 import { BoxIcon } from "@kit/ui/icons";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-const VARIANTS = ["primary", "outline", "ghost", "destructive", "link"] as const;
+const VARIANTS = ["primary", "default", "ghost", "destructive", "link"] as const;
 const SIZES = ["md", "icon-sm", "icon-md"] as const;
 
 const meta = {
@@ -76,7 +76,7 @@ export const Primary: Story = {
 export const Outline: Story = {
 	args: {
 		children: "Button",
-		variant: "outline",
+		variant: "default",
 	},
 };
 

@@ -15,7 +15,7 @@ export const Default: Story = {
 		return (
 			<>
 				<Toaster />
-				<Button variant="outline" onClick={() => toast.message("Hello this is a toast message")}>
+				<Button variant="default" onClick={() => toast.message("Hello this is a toast message")}>
 					Default
 				</Button>
 			</>
@@ -28,7 +28,7 @@ export const Success: Story = {
 		return (
 			<>
 				<Toaster />
-				<Button variant="outline" onClick={() => toast.success("Hello this is a success toast message")}>
+				<Button variant="default" onClick={() => toast.success("Hello this is a success toast message")}>
 					Success
 				</Button>
 			</>
@@ -41,7 +41,7 @@ export const Errors: Story = {
 		return (
 			<>
 				<Toaster />
-				<Button variant="outline" onClick={() => toast.error("Hello this is an error toast message")}>
+				<Button variant="default" onClick={() => toast.error("Hello this is an error toast message")}>
 					Error
 				</Button>
 			</>
@@ -54,7 +54,7 @@ export const Warnings: Story = {
 		return (
 			<>
 				<Toaster />
-				<Button variant="outline" onClick={() => toast.warning("Hello this is a warning toast message")}>
+				<Button variant="default" onClick={() => toast.warning("Hello this is a warning toast message")}>
 					Warning
 				</Button>
 			</>
@@ -67,7 +67,7 @@ export const Loading: Story = {
 		return (
 			<>
 				<Toaster />
-				<Button variant="outline" onClick={() => toast.loading("Hello this is a loading toast message")}>
+				<Button variant="default" onClick={() => toast.loading("Hello this is a loading toast message")}>
 					Loading
 				</Button>
 			</>

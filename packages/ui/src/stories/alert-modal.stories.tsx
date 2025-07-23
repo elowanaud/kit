@@ -26,7 +26,7 @@ export const Default: Story = {
 					</div>
 
 					<div className="flex flex-col justify-end gap-2 sm:flex-row">
-						<AlertModal.Close render={<Button variant="outline" className="w-full sm:w-auto" />}>
+						<AlertModal.Close render={<Button variant="default" className="w-full sm:w-auto" />}>
 							Cancel
 						</AlertModal.Close>
 						<AlertModal.Close render={<Button variant="destructive" className="w-full sm:w-auto" />}>

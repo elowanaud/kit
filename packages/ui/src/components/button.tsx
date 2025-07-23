@@ -12,11 +12,11 @@ const buttonVariants = cva(
 			variant: {
 				primary:
 					"bg-primary-9 text-primary-contrast hover:not-disabled:bg-primary-10 focus-visible:ring-2 focus-visible:ring-primary-7 focus-visible:ring-offset-1",
-				outline:
-					"border border-neutral-7 bg-neutral-1 text-neutral-12 hover:not-disabled:border-neutral-8 hover:not-disabled:bg-neutral-2 focus-visible:ring-2 focus-visible:ring-neutral-7 focus-visible:ring-offset-1",
+				default:
+					"border border-neutral-7 bg-neutral-1 text-neutral-12 hover:not-disabled:border-neutral-8 hover:not-disabled:bg-neutral-3 focus-visible:ring-2 focus-visible:ring-neutral-7 focus-visible:ring-offset-1",
 				ghost: "bg-transparent text-neutral-12 hover:not-disabled:bg-neutral-3 focus-visible:bg-neutral-3",
 				destructive:
-					"bg-red-9 text-primary-1 hover:not-disabled:bg-red-10 focus-visible:ring-2 focus-visible:ring-red-7 focus-visible:ring-offset-1",
+					"bg-destructive-9 text-primary-1 hover:not-disabled:bg-destructive-10 focus-visible:ring-2 focus-visible:ring-destructive-7 focus-visible:ring-offset-1",
 				link: "text-primary-9 hover:not-disabled:text-primary-10 hover:not-disabled:underline focus-visible:underline",
 			},
 			size: {

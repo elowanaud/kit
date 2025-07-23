@@ -4,7 +4,7 @@ import { LaptopMinimalIcon, LogOutIcon, MoonIcon, SunIcon } from "@kit/ui/icons"
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 const meta: Meta<typeof DropdownMenu> = {
-	title: "DropdownMenu",
+	title: "Navigation/Dropdown Menu",
 	component: DropdownMenu,
 	subcomponents: {
 		Trigger: DropdownMenu.Trigger,
@@ -29,7 +29,7 @@ type Story = StoryObj<typeof DropdownMenu>;
 export const Default: Story = {
 	render: () => (
 		<DropdownMenu>
-			<DropdownMenu.Trigger render={<Button variant={"outline"} />}>Dropdown Menu</DropdownMenu.Trigger>
+			<DropdownMenu.Trigger render={<Button variant={"default"} />}>Dropdown Menu</DropdownMenu.Trigger>
 			<DropdownMenu.Content>
 				<DropdownMenu.Item>Item 1</DropdownMenu.Item>
 				<DropdownMenu.Item>Item 2</DropdownMenu.Item>

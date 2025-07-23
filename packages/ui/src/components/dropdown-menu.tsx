@@ -72,9 +72,9 @@ function Item(props: Menu.Item.Props & { destructive?: boolean }) {
 	return (
 		<Menu.Item
 			className={cn(
-				"flex cursor-default items-center gap-2 rounded-md px-3 py-1 text-neutral-12 text-sm/normal outline-none transition-colors focus-within:bg-neutral-4 hover:bg-neutral-4 [&_svg]:size-4",
+				"flex cursor-default items-center gap-2 rounded-md px-3 py-1 text-neutral-12 text-sm/normal outline-none transition-colors focus-within:bg-neutral-4 hover:bg-neutral-4 data-[popup-open]:bg-neutral-4 [&_svg]:size-4",
 				{
-					"text-red-9 focus-within:bg-red-3 hover:bg-red-3": destructive,
+					"text-destructive-9 focus-within:bg-destructive-3 hover:bg-destructive-3": destructive,
 				},
 				className,
 			)}
@@ -135,8 +135,27 @@ function RadioItem(props: Menu.RadioItem.Props) {
 }
 DropdownMenu.RadioItem = RadioItem;
 
+type DropdownSubMenuContextType = {
+	isOpen: boolean;
+};
+
+const DropdownSubMenuContext = createContext<DropdownSubMenuContextType>({
+	isOpen: false,
+});
+
 function SubMenu(props: Menu.SubmenuRoot.Props) {
-	return <Menu.SubmenuRoot {...props} />;
+	const { onOpenChange, ...otherProps } = props;
+	const [isOpen, setIsOpen] = useState(props.defaultOpen ?? props.open ?? false);
+
+	const handleOpenChange = (open: boolean, event?: Event, reason?: Menu.Root.OpenChangeReason) => {
+		setIsOpen(open);
+		onOpenChange?.(open, event, reason);
+	};
+	return (
+		<DropdownSubMenuContext value={{ isOpen }}>
+			<Menu.SubmenuRoot onOpenChange={handleOpenChange} {...otherProps} />
+		</DropdownSubMenuContext>
+	);
 }
 DropdownMenu.SubMenu = SubMenu;
 
@@ -156,24 +175,30 @@ DropdownMenu.SubMenuTrigger = SubMenuTrigger;
 
 function SubMenuContent(props: Menu.Positioner.Props) {
 	const { children, sideOffset = 4, ...otherProps } = props;
+	const { isOpen } = useContext(DropdownSubMenuContext);
 
 	return (
-		<Menu.Portal>
-			<Menu.Positioner sideOffset={sideOffset} {...otherProps}>
-				<Menu.Popup
-					render={
-						<m.div
-							initial={{ opacity: 0, scale: 0.95 }}
-							animate={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 0.1 }}
-						/>
-					}
-					className="rounded-lg border border-neutral-6 bg-neutral-1 p-1 shadow outline-none"
-				>
-					{children}
-				</Menu.Popup>
-			</Menu.Positioner>
-		</Menu.Portal>
+		<AnimatePresence>
+			{isOpen && (
+				<Menu.Portal>
+					<Menu.Positioner sideOffset={sideOffset} {...otherProps}>
+						<Menu.Popup
+							render={
+								<m.div
+									initial={{ opacity: 0, scale: 0.95 }}
+									animate={{ opacity: 1, scale: 1 }}
+									exit={{ opacity: 0, scale: 0.95 }}
+									transition={{ duration: 0.1 }}
+								/>
+							}
+							className="rounded-lg border border-neutral-6 bg-neutral-1 p-1 shadow outline-none"
+						>
+							{children}
+						</Menu.Popup>
+					</Menu.Positioner>
+				</Menu.Portal>
+			)}
+		</AnimatePresence>
 	);
 }
 DropdownMenu.SubMenuContent = SubMenuContent;

@@ -13,9 +13,9 @@ function FieldLabel(props: ComponentProps<"label"> & { required?: boolean }) {
 	return (
 		<label
 			className={cn(
-				"font-medium text-neutral-12 text-sm",
+				"font-medium text-neutral-12 text-sm/normal",
 				{
-					"before:pr-0.5 before:text-red-9 before:content-['*']": required,
+					"before:pr-0.5 before:text-destructive-9 before:content-['*']": required,
 				},
 				className,
 			)}
@@ -35,6 +35,6 @@ Field.Description = FieldDescription;
 function FieldError(props: ComponentProps<"span">) {
 	const { className, ...otherProps } = props;
 
-	return <span className={cn("text-red-9 text-sm", className)} {...otherProps} />;
+	return <span className={cn("text-destructive-9 text-sm", className)} {...otherProps} />;
 }
 Field.Error = FieldError;

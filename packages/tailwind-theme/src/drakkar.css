@@ -25,4 +25,17 @@
   --color-neutral-10: #838383;
   --color-neutral-11: #646464;
   --color-neutral-12: #202020;
+
+  --color-destructive-1: #fffcfc;
+  --color-destructive-2: #fff7f7;
+  --color-destructive-3: #feebec;
+  --color-destructive-4: #ffdbdc;
+  --color-destructive-5: #ffcdce;
+  --color-destructive-6: #fdbdbe;
+  --color-destructive-7: #f4a9aa;
+  --color-destructive-8: #eb8e90;
+  --color-destructive-9: #e5484d;
+  --color-destructive-10: #dc3e42;
+  --color-destructive-11: #ce2c31;
+  --color-destructive-12: #641723;
 }
