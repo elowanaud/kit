@@ -1,6 +1,6 @@
 import { test } from "@japa/runner";
 import { UserFactory } from "#database/factories/user_factory";
-import UserPresenter from "#presenters/user_presenter";
+import UserPresenter from "#presenters/user.presenter";
 
 test.group("Presenters / User", () => {
 	test("should return user data in JSON format", async ({ assert }) => {

@@ -1,7 +1,7 @@
 import { inject } from "@adonisjs/core";
 import type { HttpContext } from "@adonisjs/core/http";
 import User from "#models/user";
-import UserPresenter from "#presenters/user_presenter";
+import UserPresenter from "#presenters/user.presenter";
 
 @inject()
 export default class LoginController {
