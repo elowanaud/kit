@@ -151,6 +151,9 @@ importers:
         specifier: ^4.0.5
         version: 4.0.5
     devDependencies:
+      '@kit/tailwind-theme':
+        specifier: workspace:*
+        version: link:../../packages/tailwind-theme
       '@tailwindcss/postcss':
         specifier: ^4.1.11
         version: 4.1.11

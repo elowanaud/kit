@@ -24,6 +24,7 @@
 		"zod": "^4.0.5"
 	},
 	"devDependencies": {
+		"@kit/tailwind-theme": "workspace:*",
 		"@tailwindcss/postcss": "^4.1.11",
 		"@tanstack/react-query-devtools": "^5.83.0",
 		"@types/node": "^>=22.0.0 <23.0.0",
