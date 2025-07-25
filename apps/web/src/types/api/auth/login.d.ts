@@ -1,10 +1,10 @@
-import { InferRequestType, InferResponseType, InferErrorType } from "@tuyau/client";
-import { useApi } from "@/lib/api/client";
+import type { InferErrorType, InferRequestType, InferResponseType } from "@tuyau/client";
+import type { api } from "@/lib/api/client";
 
-export type LoginRequest = InferRequestType<typeof useApi.auth.login.$post>;
-export type LoginResponse = InferResponseType<typeof useApi.auth.login.$post>;
+export type LoginRequest = InferRequestType<typeof api.auth.login.$post>;
+export type LoginResponse = InferResponseType<typeof api.auth.login.$post>;
 export type LoginError =
-	| NonNullable<InferErrorType<typeof useApi.auth.login.$post>>
+	| NonNullable<InferErrorType<typeof api.auth.login.$post>>
 	| {
 			status: 400;
 			value: {

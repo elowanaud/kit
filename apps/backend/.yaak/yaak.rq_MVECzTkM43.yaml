@@ -1,19 +1,18 @@
 type: http_request
 model: http_request
-id: rq_CxLdbamrDz
-createdAt: 2025-07-05T11:08:31.666426
-updatedAt: 2025-07-25T12:31:22.347253
+id: rq_MVECzTkM43
+createdAt: 2025-07-25T12:31:19.701752
+updatedAt: 2025-07-25T12:31:29.590390
 workspaceId: wk_onW5dToXJ6
 folderId: fl_4EUMi2Vauv
 authentication: {}
 authenticationType: null
-body:
-  form: []
+body: {}
 bodyType: null
 description: ''
 headers: []
-method: DELETE
-name: Logout
-sortPriority: 2000.0
-url: ${[ BASE_URL ]}/auth/logout
+method: GET
+name: Me
+sortPriority: 0.0
+url: ${[ BASE_URL ]}/auth/me
 urlParameters: []

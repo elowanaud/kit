@@ -2,7 +2,7 @@ type: http_request
 model: http_request
 id: rq_cCz6P3bxhg
 createdAt: 2025-07-05T10:49:27.202951
-updatedAt: 2025-07-23T18:25:00.880170
+updatedAt: 2025-07-25T12:31:22.346438
 workspaceId: wk_onW5dToXJ6
 folderId: fl_4EUMi2Vauv
 authentication: {}
@@ -30,6 +30,6 @@ headers:
   id: 9axq7rUZzf
 method: POST
 name: Login
-sortPriority: -1751712567200.0
+sortPriority: 1000.0
 url: ${[ BASE_URL ]}/auth/login
 urlParameters: []

@@ -1,0 +1,19 @@
+{
+	"features": {
+		"auth": {
+			"login": {
+				"hooks": {
+					"use-login-mutation": {
+						"messages": {
+							"success": "Connexion réussie",
+							"error": {
+								"400": "Identifiants invalides",
+								"default": "Une erreur est survenue"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

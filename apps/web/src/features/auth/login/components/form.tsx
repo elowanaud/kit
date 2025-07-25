@@ -1,13 +1,13 @@
 "use client";
 
+import { Button } from "@kit/ui/components/button";
 import { Field } from "@kit/ui/components/field";
-import { useLoginForm, type LoginFormData } from "@/features/auth/login/hooks/use-form";
 import { Input } from "@kit/ui/components/input";
 import { PasswordInput } from "@kit/ui/components/password-input";
-import { Button } from "@kit/ui/components/button";
-import { useLoginMutation } from "@/features/auth/login/hooks/use-login-mutation";
-import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { useEffect } from "react";
+import { useLoginForm } from "@/features/auth/login/hooks/use-form";
+import { useLoginMutation } from "@/features/auth/login/hooks/use-login-mutation";
 
 type LoginFormProps = {
 	redirectUrl?: string;
@@ -16,19 +16,14 @@ type LoginFormProps = {
 export function LoginForm(props: LoginFormProps) {
 	const { redirectUrl } = props;
 
-	const router = useRouter();
+	const t = useTranslations("features.auth.login.components.form");
 	const {
 		register,
 		handleSubmit: handleValidation,
 		formState: { isSubmitting },
 		reset,
 	} = useLoginForm();
-	const { mutateAsync: login, error: submitError } = useLoginMutation();
-
-	const handleSubmit = async (data: LoginFormData) => {
-		await login(data);
-		router.push(redirectUrl ?? "/");
-	};
+	const { mutateAsync: login, error: submitError } = useLoginMutation({ redirectUrl });
 
 	useEffect(() => {
 		if (submitError) {
@@ -37,19 +32,21 @@ export function LoginForm(props: LoginFormProps) {
 	}, [submitError, reset]);
 
 	return (
-		<form onSubmit={handleValidation(handleSubmit)} noValidate>
+		<form className="space-y-4" onSubmit={handleValidation((data) => login(data))} noValidate>
 			<Field>
-				<Field.Label>Email</Field.Label>
-				<Input type="email" autoComplete="email" {...register("email")} />
+				<Input placeholder={t("fields.email.label")} type="email" autoComplete="email" {...register("email")} />
 			</Field>
 
 			<Field>
-				<Field.Label>Password</Field.Label>
-				<PasswordInput autoComplete="current-password" {...register("password")} />
+				<PasswordInput
+					placeholder={t("fields.password.label")}
+					autoComplete="current-password"
+					{...register("password")}
+				/>
 			</Field>
 
-			<Button type="submit" loading={isSubmitting}>
-				Login
+			<Button type="submit" loading={isSubmitting} className="w-full">
+				{t("actions.submit")}
 			</Button>
 		</form>
 	);

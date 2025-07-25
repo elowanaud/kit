@@ -20,7 +20,7 @@ export function Input(props: InputProps) {
 			</span>
 			<input
 				className={cn(
-					"h-9 flex-1 rounded-lg border border-neutral-7 bg-neutral-1 px-1.5 text-base text-neutral-12 outline-none ring-0 ring-primary-7 transition-all placeholder:text-neutral-9 hover:not-disabled:border-neutral-8 hover:bg-neutral-2 focus-visible:border-primary-7 focus-visible:ring-2 focus-visible:hover:border-primary-8 disabled:cursor-not-allowed sm:text-sm",
+					"h-9 flex-1 rounded-lg border border-neutral-7 bg-neutral-1 px-3 text-base text-neutral-12 outline-none ring-0 ring-primary-7 transition-all placeholder:text-neutral-9 hover:not-disabled:border-neutral-8 hover:bg-neutral-2 focus-visible:border-primary-7 focus-visible:ring-2 focus-visible:hover:border-primary-8 disabled:cursor-not-allowed sm:text-sm",
 					{
 						"pl-8": leftIcon,
 						"pr-8": rightIcon,

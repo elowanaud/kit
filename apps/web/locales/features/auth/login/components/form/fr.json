@@ -1,0 +1,23 @@
+{
+	"features": {
+		"auth": {
+			"login": {
+				"components": {
+					"form": {
+						"fields": {
+							"email": {
+								"label": "Email"
+							},
+							"password": {
+								"label": "Mot de passe"
+							}
+						},
+						"actions": {
+							"submit": "Se connecter"
+						}
+					}
+				}
+			}
+		}
+	}
+}

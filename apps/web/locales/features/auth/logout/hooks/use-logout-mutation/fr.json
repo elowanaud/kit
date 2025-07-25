@@ -1,0 +1,16 @@
+{
+	"features": {
+		"auth": {
+			"logout": {
+				"hooks": {
+					"use-logout-mutation": {
+						"messages": {
+							"success": "Déconnexion réussie",
+							"error": "Une erreur est survenue"
+						}
+					}
+				}
+			}
+		}
+	}
+}

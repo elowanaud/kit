@@ -11,7 +11,7 @@ export default async function RootLayout({
 
 	return (
 		<html lang={locale}>
-			<body>
+			<body className="bg-neutral-2 antialiased">
 				<Providers>{children}</Providers>
 			</body>
 		</html>

@@ -97,7 +97,7 @@ function classNames<
 	return {
 		control: ({ isFocused, isDisabled }) =>
 			clsx(
-				"min-h-9! rounded-lg border border-neutral-7 bg-neutral-1 px-1.5 py-1 text-base text-neutral-12 transition-all hover:border-neutral-8 hover:bg-neutral-2 sm:text-sm",
+				"min-h-9! rounded-lg border border-neutral-7 bg-neutral-1 py-1 pr-1.5 pl-3 text-base text-neutral-12 transition-all hover:border-neutral-8 hover:bg-neutral-2 sm:text-sm",
 				{
 					"border-primary-7 ring-2 ring-primary-7 hover:border-primary-7": isFocused,
 					"opacity-50": isDisabled,

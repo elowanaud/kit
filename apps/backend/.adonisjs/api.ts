@@ -7,6 +7,10 @@
 import type { MakeTuyauRequest, MakeNonSerializedTuyauResponse } from '@tuyau/utils/types'
 import type { InferInput } from '@vinejs/vine/types'
 
+type AuthMeGetHead = {
+  request: unknown
+  response: MakeNonSerializedTuyauResponse<import('../src/controllers/auth/me.controller.ts').default['handle'], false>
+}
 type AuthLoginPost = {
   request: MakeTuyauRequest<InferInput<typeof import('../src/controllers/auth/login.controller.ts')['validator']>>
   response: MakeNonSerializedTuyauResponse<import('../src/controllers/auth/login.controller.ts').default['handle'], true>
@@ -21,6 +25,12 @@ type HealthGetHead = {
 }
 export interface ApiDefinition {
   'auth': {
+    'me': {
+      '$url': {
+      };
+      '$get': AuthMeGetHead;
+      '$head': AuthMeGetHead;
+    };
     'login': {
       '$url': {
       };
