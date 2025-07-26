@@ -16,6 +16,7 @@ export function useLoginMutation(props: UseLoginMutationProps = {}) {
 	const router = useRouter();
 
 	return useMutation<LoginResponse, LoginError, LoginRequest>({
+		mutationKey: ["login"],
 		mutationFn: (data) => api.auth.login.$post(data).unwrap(),
 		onSuccess: () => {
 			toast.success(t("messages.success"));

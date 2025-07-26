@@ -9,6 +9,7 @@ export function useLogoutMutation() {
 	const router = useRouter();
 
 	return useMutation({
+		mutationKey: ["logout"],
 		mutationFn: () => api.auth.logout.$delete().unwrap(),
 		onSuccess: () => {
 			toast.success(t("messages.success"));
